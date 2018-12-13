@@ -18,7 +18,7 @@ Resources:
   DepAlias:  
     Type: AWS::Lambda::Alias
     Properties:     
-     Description: Production         
+     Description: Development        
      FunctionName: !Ref TimeFunction
      FunctionVersion: "2"
-     Name: "Production"
+     Name: "Development"
