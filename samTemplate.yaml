@@ -15,3 +15,13 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: GET
+  DepAlias:  
+    Type: AWS::Lambda::Alias
+    Properties:     
+     Description: Production         
+     FunctionName: !Ref TimeFunction
+     FunctionVersion:
+       Fn::GetAtt: 
+        - "TimeFunction"
+        - "Version"
+     Name: "Production"
