@@ -8,7 +8,7 @@ Resources:
       Handler: index.handler
       Runtime: nodejs6.10
       CodeUri: ./
-      AutoPublishAlias: "Development"
+      AutoPublishAlias: "Dev"
       Events:
         MyTimeApi:
           Type: Api
@@ -21,4 +21,4 @@ Resources:
      Description: Development        
      FunctionName: !Ref TimeFunction
      FunctionVersion: "2"
-     Name: "Development"
+     Name: "Dev"
