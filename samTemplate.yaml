@@ -21,4 +21,4 @@ Resources:
      Description: Development        
      FunctionName: !Ref TimeFunction
      FunctionVersion: "2"
-     Name: "Dev"
+     Name: "koko"
