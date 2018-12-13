@@ -20,8 +20,5 @@ Resources:
     Properties:     
      Description: Production         
      FunctionName: !Ref TimeFunction
-     FunctionVersion:
-       Fn::GetAtt:
-         - "TimeFunction"
-         - "Version"
+     FunctionVersion: "2"
      Name: "Production"
