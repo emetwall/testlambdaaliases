@@ -15,3 +15,10 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: GET
+  DepAlias:
+    Type: AWS::Lambda::Alias
+    Properties:
+     Description: Development
+     FunctionName: !Ref TimeFunction
+     FunctionVersion: !Ref TimeFunction.Version
+     Name: "soso"
