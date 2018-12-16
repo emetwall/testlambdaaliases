@@ -15,10 +15,3 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: GET
-  DepAlias:  
-    Type: AWS::Lambda::Alias
-    Properties:     
-     Description: Development        
-     FunctionName: !Ref TimeFunction
-     FunctionVersion: "2"
-     Name: "koko"
