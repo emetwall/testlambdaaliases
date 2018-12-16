@@ -8,17 +8,24 @@ Resources:
       Handler: index.handler
       Runtime: nodejs6.10
       CodeUri: ./
-      AutoPublishAlias: "koko1"
+      AutoPublishAlias:"Development"
       Events:
         MyTimeApi:
           Type: Api
           Properties:
             Path: /TimeResource
             Method: GET
-  DepAlias:
+  QAAlias:
     Type: AWS::Lambda::Alias
     Properties:
      Description: Development
      FunctionName: !Ref TimeFunction
      FunctionVersion: $LATEST
-     Name: "soso"
+     Name: "QA"
+  ProdAlias:
+    Type: AWS::Lambda::Alias
+    Properties:
+     Description: Development
+     FunctionName: !Ref TimeFunction
+     FunctionVersion: 12
+     Name: "Prod"
