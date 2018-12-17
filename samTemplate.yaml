@@ -17,6 +17,7 @@ Resources:
             Path: /TimeResource
             Method: GET
   QAAlias:
+    DependsOn: TimeFunction
     Type: AWS::Lambda::Alias
     Properties:
      Description: Development
