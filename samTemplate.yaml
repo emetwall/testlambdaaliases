@@ -22,7 +22,10 @@ Resources:
     Properties:
      Description: Development
      FunctionName: !Ref TimeFunction
-     FunctionVersion: $LATEST
+     FunctionVersion:
+       Fn::GetAtt: 
+        - "TimeTestFunction"
+        - "Version"
      Name: "QA"
   ProdAlias:
     Type: AWS::Lambda::Alias
