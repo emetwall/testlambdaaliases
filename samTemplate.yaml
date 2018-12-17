@@ -22,8 +22,8 @@ Resources:
      FunctionName: !Ref TimeFunction
      FunctionVersion:
        Fn::GetAtt:
-         - "TimeFunction"
-         - "Version"
+         - 'TimeFunction'
+         - 'Version'
      Name: "QA"
   ProdAlias:
     Type: AWS::Lambda::Alias
