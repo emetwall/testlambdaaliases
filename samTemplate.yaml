@@ -3,6 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
 Resources:
   TimeFunction:
+    FunctionName: "TimeTestFunction"
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
@@ -22,8 +23,8 @@ Resources:
      FunctionName: !Ref TimeFunction
      FunctionVersion:
        Fn::GetAtt:
-         - 'TimeFunction'
-         - 'Version'
+         - "TimeTestFunction"
+         - "Version"
      Name: "QA"
   ProdAlias:
     Type: AWS::Lambda::Alias
