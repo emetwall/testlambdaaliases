@@ -22,7 +22,7 @@ Resources:
     Properties:
      Description: Development
      FunctionName: !Ref TimeFunction
-     FunctionVersion: !Ref TimeFunction.Version
+     FunctionVersion: "!Ref TimeFunction.Version"
      Name: "QA"
   ProdAlias:
     Type: AWS::Lambda::Alias
