@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: '2010-09-09'i
 Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
 Resources:
@@ -22,7 +22,7 @@ Resources:
     Properties:
      Description: Development
      FunctionName: !Ref TimeFunction
-     FunctionVersion: "!Ref TimeFunction.Version"
+     FunctionVersion: !GetAtt TimeFunction.Version.Version
      Name: "QA"
   ProdAlias:
     Type: AWS::Lambda::Alias
